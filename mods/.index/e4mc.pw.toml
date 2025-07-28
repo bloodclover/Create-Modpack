@@ -1,0 +1,16 @@
+filename = 'e4mc_minecraft-neoforge-5.3.1.jar'
+name = 'e4mc'
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.20.2', '1.20.3', '1.20.4', '1.20.5', '1.20.6', '1.21', '1.21.1', '1.21.2', '1.21.3', '1.21.4', '1.21.5' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'cfa82112316a71fb37c2b6e6583bc6bd817a0b922e2080451ba9229fe9064e3ff99872746431fef93733fe993ac592fd44e22a4ba74d38ed88d379581acbf1a9'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/qANg5Jrr/versions/Dwiz4GeV/e4mc_minecraft-neoforge-5.3.1.jar'
+
+[update.modrinth]
+mod-id = 'qANg5Jrr'
+version = 'Dwiz4GeV'
