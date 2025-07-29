@@ -1,0 +1,16 @@
+filename = 'controlify-2.2.1+1.21.1-neoforge.jar'
+name = 'Controlify (Controller support)'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '1b3bc3cab795c92ff2717e01d0a15938d2f56a39a9110b1133ef2f8d382827643cb4325e4f80b5627355282c73b98d9467f7ed9215bc7acd97841d9ee552e3a0'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/DOUdJVEm/versions/tC8NSupE/controlify-2.2.1%2B1.21.1-neoforge.jar'
+
+[update.modrinth]
+mod-id = 'DOUdJVEm'
+version = 'tC8NSupE'
