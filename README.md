@@ -6,3 +6,5 @@ This modpack is intended to be used with [neoforged](https://neoforged.net/). Al
 
 ## Note
 **This is my first modpack** and I am not great at maintaining things either, but it will probably update once in a while. If you are using prismlauncher or smth like that remember to redownload the pack after a new release, thank you.
+
+I have a mirror on [git.gay](https://git.gay/bloodclover/Create-Modpack) now!
