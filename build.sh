@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-## Welcome to the best tasting spagetti code ever.
+## Welcome to the best tasting spaghetti code ever.
 ## It's really weird but I love shell script now! It's like cuddling a blåhaj :3
 ## You need one package to run this, zip.
 ## Install zip by doing the "thing", in my case it's "sudo pacman -S zip".
@@ -11,7 +11,7 @@
 
 
 
-                       ##To disable zip when testing the script.
+                       ##To not make a million packages when testing the script.
 testing_mode=false
 
 if ! $testing_mode; then
@@ -27,18 +27,24 @@ echo ""
 echo Checking possible overrides...
 
 
-                ## Checking if there already is a file with that version.
+                ## Checking if there already is a file with that version. (Warning: spaghetti code inbound!!)
 for x in ./builds/*
 do
     filename=${x%%".zip"*}
     if [ "${filename##*"_v"}" = "$version" ]; then
-        echo "ERROR: That version is already used!, move or delete the file with the version: $version" 
-        exit 1
+        read -p "WARN: That version is already used!, would you like to override it? [y/N] " input
+        if [[ ${input,,} == "y" ]]; then
+            rm $x
+        else
+            echo Exiting..
+            exit 0
+        fi
+        
     fi
 done
 
 echo ""
-
+if ! $testing_mode; then
 echo prepping...
 
 
@@ -58,7 +64,6 @@ done
 
 
                 ##Zipping
-if ! $testing_mode; then
     echo zipping... MAKE SURE YOU HAVE ZIP INSTALLED!!!
     zip -r Clovers-Modpack_v$version.zip ./Clovers-Modpack_v$version
 
@@ -67,6 +72,8 @@ if ! $testing_mode; then
 
                     ## Cleaning workspace
     mv Clovers-Modpack_v$version.zip ./builds/
+else
+    echo Skipping building, test_mode is enabled.
 fi
 
 rm -rf ./Clovers-Modpack_v$version
